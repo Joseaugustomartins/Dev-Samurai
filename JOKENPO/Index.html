@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOKENPOt</title>
+    
+    <style>
+        #principal{
+          border: 1px solid red;
+        }
+
+        #placar{
+            border: 1px solid blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #jogador, #computador{
+            flex-grow: 1;
+        }
+
+        #jogador{
+            background-color: red;
+        }
+
+        #versus{
+            background-color: blue;
+        }
+
+        #computador{
+            background-color: green;
+        }
+
+        #mensagem{
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+ <div id="principal">
+    <h1 id="titulo">PEDRA, PAPEL E TESOURA</h1>
+
+    <div id="placar">
+        <div id="jogador">
+            <h2 id="jogador-nome">JOSE</h2>
+            <span id="jogador-pontos">0</span>
+            <ul id="jogador-escolha">
+                <li><a id="jogador-escolha1"><img src="https://raw.githubusercontent.com/Joseaugustomartins/Dev-Samurai/main/imagens/pedra.png"></a></li>
+            </ul>
+        </div>
+        <div id="versus">
+            vs
+        </div>
+        <div id="computador">
+            computador
+        </div>
+    </div>
+
+    <div id="mensagem">mensagens</div>
+ </div>
+</body>
+</html>
