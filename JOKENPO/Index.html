@@ -6,36 +6,103 @@
     <title>JOKENPOt</title>
     
     <style>
-        #principal{
-          border: 1px solid red;
-        }
+        * {
+        font-family: Helvetica Neue, Helvetica, Arial;
+        font-weight: 400;
+        cursor: default;
+    }
 
-        #placar{
-            border: 1px solid blue;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    body {
+        background-color: #f8f8f8;
+    }
 
-        #jogador, #computador{
-            flex-grow: 1;
-        }
+     #titulo {
+        font-size: 40px;
+        color: #273c75;
+        text-align: center;
+    }
 
-        #jogador{
-            background-color: red;
-        }
+    #placar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-        #versus{
-            background-color: blue;
-        }
+    #jogador, #computador {
+        position: relative;
+        flex-grow: 1;
+        border-radius: 5px;
+        width: 200px;
+        padding: 20px;
+        color: #fff;
+    }
+    #jogador {
+        background-color: #ff7675;
+    }
+    #computador {
+        background-color: #74b9ff;
+    }
+    #versus {
+        width: 200px;
+        text-align: center;
+        font-size: 72px;
+        font-weight: 300;
+    }
 
-        #computador{
-            background-color: green;
-        }
+    #jogador-nome, #computador-nome {
+        margin: 0;
+        padding: 0;
+    }
+    #jogador-nome {
+        text-align: left;
+    }
+    #computador-nome {
+        text-align: right;
+    }
 
-        #mensagem{
-            border: 1px solid green;
-        }
+    #jogador-pontos, #computador-pontos {
+        position: absolute;
+        top: 8px;
+        font-size: 72px;
+    }
+    #jogador-pontos {
+        right: 20px;
+    }
+    #computador-pontos {
+        left: 20px;
+    }
+
+    #jogador-escolha, #computador-escolha {
+        list-style: none;
+        text-align: center;
+        margin: 30px 0 0;
+        padding: 0;
+     }
+    #jogador-escolha li, #computador-escolha li {
+        display: inline;
+        padding: 0 15px;
+    }
+    #jogador-escolha a, #computador-escolha a {
+        opacity: .2;
+        padding: 5px;
+    }
+    #jogador-escolha a:hover, #jogador-escolha a.selecionado, #computador-escolha a.selecionado {
+        opacity: 1;
+    }
+    #jogador-escolha img, #computador-escolha img {
+        max-width: 80px;
+    }
+
+    #mensagem {
+        border-radius: 5px;
+        background-color: #7f8fa6;
+        font-size: 25px;
+        color: #fff;
+        text-align: center;
+        font-weight: 400;
+        margin-top: 20px;
+        padding: 20px;
+    }
     </style>
 </head>
 <body>
@@ -51,13 +118,18 @@
                 <li><a id="jogador-escolha2"><img src="https://raw.githubusercontent.com/Joseaugustomartins/Dev-Samurai/main/imagens/papel.png"></a></li>
                 <li><a id="jogador-escolha3"><img src="https://raw.githubusercontent.com/Joseaugustomartins/Dev-Samurai/main/imagens/tesoura.png"></a></li>
             </ul>
-                        
-        </div>
-        <div id="versus">
-            vs
-        </div>
+         </div>
+
+        <div id="versus">vs </div>
+
         <div id="computador">
-            computador
+            <h2 id="computador-nome">computador</h2>
+            <span id="computador-pontos">0</span>
+            <ul id="computador-escolha">
+                <li><a id="computador-escolha1"><img src="https://raw.githubusercontent.com/Joseaugustomartins/Dev-Samurai/main/imagens/pedra.png"></a></li>
+                <li><a id="computador-escolha2"><img src="https://raw.githubusercontent.com/Joseaugustomartins/Dev-Samurai/main/imagens/papel.png"></a></li>
+                <li><a id="computador-escolha3"><img src="https://raw.githubusercontent.com/Joseaugustomartins/Dev-Samurai/main/imagens/tesoura.png"></a></li>
+            </ul>
         </div>
     </div>
 
