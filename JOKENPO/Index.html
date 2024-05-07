@@ -86,7 +86,7 @@
         opacity: .2;
         padding: 5px;
     }
-    #jogador-escolha a:hover, #jogador-escolha a.selecionado, #computador-escolha a.selecionado {
+    #jogador-escolha a:hover, #jogador-escolha a.selecionador, #computador-escolha a.selecionador {
         opacity: 1;
     }
     #jogador-escolha img, #computador-escolha img {
@@ -138,18 +138,24 @@
 
  <script>
     var jogadorNome;
-    var jogadorEscolha;
+    var jogadorPontos = 0;
+    var jogadorEscolha = 0;
 
-    var computadorEscolha; 
+    var computadorPontos = 0;
+    var computadorEscolha = 0; 
     
     function mensagem(texto){
         document.getElementById('mensagem').innerHTML = texto;
     }
 
+    function definirNomeJogador(nome){
+        document.getElementById('jogador-nome').innerHTML = nome;
+    }
+
     function sortear(min, max){
         return Math.floor(Math.random() * (max - min + 1)) + min
     }
-
+    
     function calcularEscolha(jogador, computador){
         if(jogador == 1 && computador == 1){
             return 0;
@@ -180,22 +186,35 @@
         }
     }
 
+    function somarPontosJogador(){
+        jogadorPontos ++;
+        document.getElementById('jogador-pontos').innerHTML = jogadorPontos;
+    }
+
+    function somarPontosComputador(){
+        computadorPontos ++;
+        document.getElementById('computador-pontos').innerHTML = computadorPontos;
+    }
+
+
     function jogar(Escolha){
         jogadorEscolha = Escolha;
         //sortear a jogada do computador
-       computadorEscolha = sortear(1,3);
+        computadorEscolha = sortear(1,3);
 
-       var ganhador = calcularEscolha(jogadorEscolha, computadorEscolha);
+        var ganhador = calcularEscolha(jogadorEscolha, computadorEscolha);
        
-       if(ganhador == 0){
-        mensagem('empate');
-       }
-       else if(ganhador == 1){
-        mensagem('jogador');
-       }
-       else if(ganhador == 2){
-        mensagem('computador');
-       }
+        if(ganhador == 0){
+        mensagem('Empate');
+        }
+        else if(ganhador == 1){
+        mensagem('Ponto para ' + jogadorNome);
+        somarPontosJogador();
+        }
+        else if(ganhador == 2){
+        mensagem('Ponto para computador');
+        somarPontosComputador();
+        }
      }
 
     document.getElementById('jogador-escolha1').onclick = function(){jogar(1)};
@@ -205,7 +224,7 @@
    jogadorNome =  prompt('Qual e o seu nome?')
 
    mensagem('Bem vindo ' + jogadorNome + ' está preparado? Escolha uma opção acima...');
-   document.getElementById('jogador-nome').innerHTML =jogadorNome;
+   definirNomeJogador(jogadorNome);
  </script>
 </body>
 </html>
