@@ -1,0 +1,17 @@
+<html>
+    <script>
+        //var equivalente a uma "variavel global"
+        var x = 10
+        console.log("x", x)
+
+        {
+            console.log("x", x)
+            x = 20
+
+            var y = 30
+        } // Esta acessivel e podendo alterar 
+
+        console.log("x", x)
+        console.log("y", y) // Mesmo declarando Y dentro do escopo local ainda esta acessivel 
+    </script>
+</html>
