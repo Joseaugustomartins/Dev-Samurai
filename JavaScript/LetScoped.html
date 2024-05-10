@@ -1,0 +1,17 @@
+<html>
+    <script>
+        let x = 10
+        
+        console.log("X", x)
+
+        {
+            console.log("X", x)
+            x = 20
+
+            let y = 30
+        }// o let so aceita escopo global, não da para criar um novo ou alterar fora do escopo
+
+        console.log("x", x)
+        console.log("y", y)
+    </script>
+</html>
