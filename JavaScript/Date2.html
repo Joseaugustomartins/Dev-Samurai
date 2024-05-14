@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <script>
+        /*new Date()// inicializa com a fata e hora atual do computaodor
+        new Date(year, month, day, hours, minute, seconds, milliseconds)// inicializa com valores pré-definidos
+        new Date(dateString) // incializa a partir de uma string
+
+
+        // Ele tem inumeros metodos para usar*/
+
+        const bornDate = new Date()
+        const bornDate1 = new Date(1982, 1, 18, 6, 0, 0)
+        const bornDate2 = new Date("Feb 18 1982 06:00:00")
+        const bornDate3 = new Date("1982-02-18T09:00:00.000Z")
+        const today = new Date()
+
+        console.log(bornDate)
+        console.log(bornDate1.toISOString())
+        console.log("dia", bornDate2.getDate())
+        console.log("mês", bornDate3.getMonth() + 1)
+        console.log("ano", bornDate.getFullYear())
+
+        console.log("idade", today.getFullYear - bornDate.getFullYear)
+    </script>
+</html>
