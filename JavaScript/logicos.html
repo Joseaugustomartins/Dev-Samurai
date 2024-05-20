@@ -1,0 +1,25 @@
+<html>
+    <script>
+        //OR
+        console.log(false || false) // false
+        console.log(true || true) // true
+        console.log(false || true) // true
+        console.log(true || true)  // true
+
+        // AND
+        console.log(false && false) // false
+        console.log(true && false) // false
+        console.log(false && true) // false
+        console.log(true && true)  // true
+
+        // 2+ e Misto. A precedencia fica: && / ||
+        console.log(false && false && true) // false
+        console.log(false || false || false) // true
+        console.log(false || (false && true)) // false
+
+        console.log(!true) // false
+        console.log(!false) // true
+
+        console.log((23 < 24) && ("A" == "A")) // true
+    </script>
+</html>
