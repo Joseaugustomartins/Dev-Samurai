@@ -1,0 +1,22 @@
+<html>
+    <meta charset="UTF-8" />
+    <script>
+        function mul(n){
+            n *= n
+            return res
+        } // Tudo o que e feito nesse escopo fica nesse escopo
+
+        let numVal = 10
+        console.log(mul(numVal))
+        console.log(numVal)
+
+        function multObj(obj){
+            obj.value = obj.value
+            return obj
+        } // Se for um objeto a variavel e passada como referencia, ou seja, tudo que sobe desce
+
+        const numObj = { value: 10}
+        console.log(multObj(numObj))
+        console.log(numObj)
+    </script>
+</html>
