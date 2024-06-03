@@ -1,0 +1,28 @@
+<html>
+    <meta charset="UTF-8" />
+    <script>
+        const people = [
+        {
+            id: 1,
+            name: "jose",
+            lastName: "Martins",
+            bornDate: new Date(2002, 3, 19),
+            addres: {
+                city: "Montes Claros",
+            },
+        },
+        {
+            id: 2,
+            name: "Augusto",
+            lastName: "Queiroz",
+            bornDate: new Date(2002, 3, 19),
+            addres: {
+                city: "Montes Claros",
+            }, 
+        },
+        ]
+
+        console.log(JSON.stringify(people)) // Conversão obj -> String / Json
+        console.log(JSON.parse(json)) // Converte uma String / Json -> OBJ
+    </script>
+</html>
