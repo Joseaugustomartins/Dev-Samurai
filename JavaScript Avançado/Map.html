@@ -1,0 +1,22 @@
+<html>
+    <meta charset="UTF-8" />
+    <script>
+        const numbers = [1, 2, 3, 4, 5]
+
+        const double = numbers.map((n) => n * 2)
+        console.log(double)
+
+        const fahrenheit = [0, 32, 45, 46, 47, 91, 93, 121]
+        const celcius = fahrenheit.map((t) => Math.round(((t - 32) * 5) / 9))
+        console.log(celcius)
+
+        const people = [
+            {name: "jose", age: 22},
+            {name: "Raissa", age: 21},
+            {name: "dAvi", age: 70},
+        ]
+
+        const peopleNormalized = people.map((p) => p.name.toUpperCase())
+        console.log(peopleNormalized)
+    </script>
+</html>
