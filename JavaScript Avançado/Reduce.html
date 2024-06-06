@@ -1,0 +1,51 @@
+<html>
+    <meta charset="UTF-8" />
+    <script>
+
+        // array.reduce(callback[, initialValue])
+        //
+        // callback - Funçaõ que e executada em cada valor no array, recebe quatro argumentos:
+        //      acumular - O valor retornado na ultima invicação do "callBack", ou o argumento valor inicial, se fornecido.
+        //      currentValue - O elemento atual que está sendo processado no array.
+        //      indice - O indice do elemento atual que está sendo processado na array.
+        //      array - O array ao qual a função reduce foi chamada.
+        // initialValue - opcional. Objeto a ser usado  como o primeiro argummento da primeira chamada da função callback.
+
+        let values = [1.5, 2, 4, 10]
+
+        function callBack(acumulator, currentValue, index, array){
+            console.log(`acumulator`, acumulator);
+            console.log(`currentValue`, currentValue)
+            console.log(`index`, index)
+            console.log(`array`, array)
+            console.log("---")
+
+            return acumulator + 1
+        }
+
+        values.reduce(callBack)
+
+        // Agregação
+
+        let sum = values.reduce((total, item) => total + item, 0)
+        console.log("sum", sum)
+
+        let avg = values.reduce(
+            (total, item, index) => (total + item) / (index + 1), 0
+        )
+        console.log("avg", avg)
+
+        // Map
+        let double= values.reduce((total, item)=> total,concat(item * 2),[])
+        console.log("double", double)
+
+        // Filter 
+        let newValues = values.reduce((total, item) => {
+            if(item > 2){
+                total.push(item)
+            }
+
+            return total
+            },[])
+    </script>
+</html>
