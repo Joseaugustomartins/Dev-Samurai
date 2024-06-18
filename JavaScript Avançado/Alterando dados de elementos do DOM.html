@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Curriculum</title>
+    </head>
+    <body>
+        <img src="https://github.com/Joseaugustomartins/Dev-Samurai/blob/main/JavaScript%20Avan%C3%A7ado/foto.png?raw=true" width="100" />
+        <h1 id="person-name" class="text">Seu nome</h1>
+        <h2>Programador JavaScript</h2>
+        <p class="text">
+            Conhecimento em programação Frontend, Backend para desenvolvimento de sistemas Fullstack.
+        </p>
+        <p>
+            Para mais infomrações, por favor, visite meu
+            <a href="https://github.com/Joseaugustomartins">Github</a> ou
+            <a href="https://devsamurai.com.br">Portfólio</a>
+        </p>
+    </body>
+    <script>
+        // Alterando um objeto do DOM
+
+        const titleE1 = document.querySelector("#person-name")
+        console.log("titleE1 value:", titleE1.innerHTML)
+
+        titleE1.innerHTML = "José Augusto"
+        titleE1.style.color = "red"
+    </script>
+</html>
