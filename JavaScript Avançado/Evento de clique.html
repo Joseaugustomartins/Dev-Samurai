@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <button>Clique me</button>
+        <a href="https://devsamurai.com.br">Clique me</a>
+
+        <script>
+
+            const button = document.querySelector("button")
+            button.addEventListener("click", () => {
+                console.log("Clicou no botão")
+            })
+
+            const hyperLink = document.querySelector("a")
+            hyperLink.addEventListener("click", () => {
+                console.log("Clicou no hyperlink")
+            })
+        </script>
+    </body>
+</html>
